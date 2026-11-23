@@ -1,27 +1,27 @@
 import java.util.Scanner;
 
-public class pogojni_stavki {
+public class if_cases {
     /*
     public static void main(String[] args) throws Exception {
-        //prestopno leto: deljivo s 400 ali deljivo s 4 in ne s 100
+        //leap years: can divide by 400 or can divide by 4 and not by 100
 
-        Scanner vnos = new Scanner(System.in);
-        int leto = vnos.nextInt();
+        Scanner input = new Scanner(System.in);
+        int year = input.nextInt();
 
-        boolean jePrestopno = false;
+        boolean isLeap = false;
 
-        if(leto%4 == 0) 
-            jePrestopno = true;
-        else if((leto%4 == 0) && (leto%100 != 100))
-            jePrestopno = true;
+        if(year%4 == 0) 
+            isLeap = true;
+        else if((year%4 == 0) && (leto%100 != 100))
+            isLeap = true;
         else
-            jePrestopno = false;
+            isLeap = false;
 
 
-        if(jePrestopno) 
-            System.out.print("je prestopno");
+        if(isLeap) //true 
+            System.out.print("it's a leap year");
         else
-            System.out.print("ni prestopno leto")
+            System.out.print("isn't a leap year")
         
 
 
@@ -30,32 +30,32 @@ public class pogojni_stavki {
 
 /*
     public static void main(String[] args) throws Exception {
-        //kalkulator z osnovnimi funkcijami
+        //calculator with basic functions
 
-        Scanner vnos = new Scanner(System.in);
-        System.out.println("prvo število:");
-        int s1 = vnos.nextInt();
-        System.out.println("drugo število");
-        int s2 = vnos.nextInt();
+        Scanner input = new Scanner(System.in);
+        System.out.println("first number:");
+        int number1 = input.nextInt();
+        System.out.println("second number:");
+        int number2 = input.nextInt();
 
-        System.out.println("Izberi: 1(+), 2(-), 3(*), 4(/)");
-        int izbira = vnos.nextInt();
-        double rezultat = 0;
-        boolean napaka = false;
+        System.out.println("Pick: 1(+), 2(-), 3(*), 4(/)");
+        int choice = input.nextInt();
+        double result = 0;
+        boolean error = false;
 
-        switch(izbira)
+        switch(choice)
         {
-            case 1: rezultat = s1+s2; break;
-            case 2: rezultat = s1-s2; break;
-            case 3: rezultat = s1*s2; break;
-            case 4: rezultat = (double)s1/s2; break; //casting: če hočeš intiger samo začasno spremenit v float ali double castaš
-            default: napaka = true;
+            case 1: result = number1+number2; break;
+            case 2: result = number1-number2; break;
+            case 3: result = number1*number2; break;
+            case 4: result = (double)number1/number2; break; //casting: if I want to temporarily turn int into double
+            default: error = true;
         }
         
-        if(napaka)
-            System.out.print("napaka");
+        if(error)
+            System.out.print("error");
         else
-            System.out.print(rezultat);
+            System.out.print(result);
 
     }
 }
@@ -64,50 +64,35 @@ public class pogojni_stavki {
 
 /*
     public static void main(String[] args) throws Exception {
-        //mesec in dan v letu glede na stevilo
+        //calculates month and day based on a number, for ex. 234= june 24th (not a leap year)
 
-        Scanner vnos = new Scanner(System.in);
-        System.out.println("število dneva");
-        int stevilo = vnos.nextInt();
-        boolean napaka = false;
-        int mesec = 0;
-        int dan = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("number of the day");
+        int number = input.nextInt();
+        boolean error = false;
+        int month = 0;
+        int day = 0;
 
-        if(stevilo <= 31) { //januar
-                    mesec = 1;
-                    dan = stevilo;
+        if(number <= 31) { //january
+                    month = 1;
+                    day = number;
                 } 
-        else if(stevilo <= 31+28) { //februar
-            mesec = 2;
-            dan = stevilo-31;
+        else if(number <= 31+28) { //february
+            month = 2;
+            day = number-31;
         }
-        else if(stevilo <= 31+28+31) { //marec
-            mesec = 3;
-            dan = stevilo-(31+28);
+        else if(number <= 31+28+31) { //march
+            month = 3;
+            day = number-(31+28);
         }
-        else if(stevilo <= 31+28+31+30) {  //april
-            mesec = 4;
-            dan = stevilo-(31+28+31);
+        else if(number <= 31+28+31+30) {  //april
+            month = 4;
+            day = number-(31+28+31);
         }
-        else if(stevilo <= 31+28+31+30+31) { //maj
-            mesec = 5;
-            dan = stevilo-(31+28+31+30);
-        }
-        else if(stevilo <= (31+28+31+30+31)) {  //junij
-            mesec = 6;
-            dan = stevilo-(31+28+31+30);
-        }
-        else if(stevilo <= (31+28+31+30+31+31)) { //julij
-            mesec = 7;
-            dan = stevilo-(31+28+31+30+31)
-        }
-            default: napaka = true;
-        }
-
-    }
+        this is still a work in progress prof. we can finish it by figuring out tables in our spare time
     */
     public static void main(String[] args) throws Exception {
-        //biggest number
+        //biggest number of 3 using 2 if cases
 
         Scanner input = new Scanner(System.in);
         System.out.println("first number:");
@@ -117,9 +102,7 @@ public class pogojni_stavki {
         System.out.println("third number:");
         int c = input.nextInt();
 
-        int max = 0;
-
-        max =a;
+        int max = a;
         if (b>max) max=b;
         else if (c>max) max=c;
 
