@@ -1,3 +1,5 @@
+//23.11.2026, tue
+
 import java.util.Scanner;
 
 public class loops {
