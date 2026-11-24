@@ -1,3 +1,5 @@
+//16.11.2026, mon (practice)
+
 import java.util.Scanner;
 
 public class if_cases {
