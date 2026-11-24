@@ -1,4 +1,4 @@
-//23.11.2026, tue
+//23.11.2026, tue (practice)
 
 import java.util.Scanner;
 
