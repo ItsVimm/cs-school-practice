@@ -1,4 +1,4 @@
-//23.11.2026, tue
+//23.11.2026, tue (practice)
 
 
 public class intinite_loop {
